@@ -18,7 +18,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -27,16 +28,20 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+
+      <!-- // 2. What is the day of the week today?
+      var dayWeek = today.format("[Today is] dddd")
+      $("#2a").text(dayWeek); -->
+
+
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <tbody>
       <table class="table table-striped">
-        <thead>
           <tr>
             <th scope="col">12:00</th>
           </tr>
-        </thead>
-        <tbody>
           <tr>
             <th scope="row">1:00</th>
           </tr>
@@ -72,6 +77,39 @@
           </tr>
           <tr>
             <th scope="row">12:00</th>
+          </tr>
+          <tr>
+            <th scope="row">1:00</th>
+          </tr>
+          <tr>
+            <th scope="row">2:00</th>
+          </tr>
+          <tr>
+            <th scope="row">3:00</th>
+          </tr>
+          <tr>
+            <th scope="row">4:00</th>
+          </tr>
+          <tr>
+            <th scope="row">5:00</th>
+          </tr>
+          <tr>
+            <th scope="row">6:00</th>
+          </tr>
+          <tr>
+            <th scope="row">7:00</th>
+          </tr>
+          <tr>
+            <th scope="row">8:00</th>
+          </tr>
+          <tr>
+            <th scope="row">9:00</th>
+          </tr>
+          <tr>
+            <th scope="row">10:00</th>
+          </tr>
+          <tr>
+            <th scope="row">11:00</th>
           </tr>
         </tbody>
       </table>

@@ -45,6 +45,14 @@ textarea {
   color: #000000;
   border-top: 1px dashed #000000;
 }
+.lead {
+  height: 35px;
+}
+
+.table table-striped {
+  font-size: 35px;
+  color: black;
+}
 
 .past {
   background-color: #d3d3d3;

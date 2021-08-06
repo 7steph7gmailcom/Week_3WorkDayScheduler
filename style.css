@@ -54,10 +54,20 @@ textarea {
   height: 35px;
 }
 
-.table table-striped {
+.table {
+  width: 4%;
+  display: inline;
+  font-size: 20px;
+}
+
+#formGroupExampleInput {
+  display: ;
+  width: 80%;
+}
+/* .table table-striped {
   font-size: 35px;
   color: black;
-}
+} */
 
 .past {
   background-color: #d3d3d3;

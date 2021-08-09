@@ -1,19 +1,20 @@
 // var age = 45;
 // console.log(age);
 
-var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
+// var today = moment();
+// $("#currentDay").text(today.format("MMM Do, YYYY"));
 
-var inputToDoEl = $("ToDo");
-var btn btn-primary = saveButton;
-console.log("btn btn-primary");
+var inputToDoEl = "ToDo";
+console.log(inputToDoEl);
 
-function inputList(event) {
+var saveEl = "save";
+console.log(saveEl);
+
+function handleFormSubmit(event) {
   event.preventDefault();
 
-  var calendarEvent = $(form - control).val();
-  console.log(calendarEvent);
+  var calendarEvent = $("inputToDoEl");
+  console.log("calendarEvent");
 }
 
-inputEl.on("ToDo", handleFormSubmit);
-h;
+saveEl.on("submit", handleFormSubmit);

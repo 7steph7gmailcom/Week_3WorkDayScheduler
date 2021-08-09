@@ -7,8 +7,9 @@
 var inputToDoEl = "ToDo";
 console.log(inputToDoEl);
 
-var saveEl = "save";
-console.log(saveEl);
+$("save-btn").on("click", function () {
+  console.log("click");
+});
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -17,4 +18,7 @@ function handleFormSubmit(event) {
   console.log("calendarEvent");
 }
 
-saveEl.on("submit", handleFormSubmit);
+// localStorage.getItem;
+//   inputToDoEl;
+// inputToDoEl.textcontent = calendarEvent;
+// // inputToDoEl.submit;

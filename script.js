@@ -8,21 +8,28 @@ $("#currentDay").text(today.format("MMM Do, YYYY"));
 var UserAssign = "#taskAssignment";
 console.log(UserAssign);
 
-var saveButton = "#SaveBtn";
-console.log(saveButton);
-
-saveButton.on
+// saveButton.on
 
 // Display User input in planner and presist data
 
-function userInput(type, message) {
-  UserAssign.textContent = message;
-}
+// function userInput(type, message) {
+//   UserAssign.textContent = message;
+// }
 
-function saveButton('click', event) {
+// function saveButton('click', event) {
+//   event.preventDefault();
+
+// document.querySelector("#taskAssignment").value;
+
+//   localStorage.setItem(UserAssign, block)
+//   localStorage.setItem(UserAssign, JSON.stringify(user)
+// };
+document.querySelector("#taskAssignment").value;
+
+saveButton.addEventListener("click", function (event) {
   event.preventDefault();
+  var saveButton = "#saveButton";
+  console.log(saveButton);
+});
 
-  var subMIT = document.querySelector("#taskAssignment").value;
-
-  localStorage.setItem(UserAssign);
-};
+localStorage.setItem("taskAssignment", JSON.stringify(taskAssignment));

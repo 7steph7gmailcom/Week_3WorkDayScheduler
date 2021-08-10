@@ -1,24 +1,28 @@
-// var age = 45;
-// console.log(age);
+var age = 45;
+console.log(age);
 
-// var today = moment();
-// $("#currentDay").text(today.format("MMM Do, YYYY"));
+// Display day of the week for user
+var today = moment();
+$("#currentDay").text(today.format("MMM Do, YYYY"));
 
-var inputToDoEl = "ToDo";
-console.log(inputToDoEl);
+var UserAssign = "#taskAssignment";
+console.log(UserAssign);
 
-$("save-btn").on("click", function () {
-  console.log("click");
-});
+var saveButton = "#SaveBtn";
+console.log(saveButton);
 
-function handleFormSubmit(event) {
-  event.preventDefault();
+saveButton.on
 
-  var calendarEvent = $("inputToDoEl");
-  console.log("calendarEvent");
+// Display User input in planner and presist data
+
+function userInput(type, message) {
+  UserAssign.textContent = message;
 }
 
-// localStorage.getItem;
-//   inputToDoEl;
-// inputToDoEl.textcontent = calendarEvent;
-// // inputToDoEl.submit;
+function saveButton('click', event) {
+  event.preventDefault();
+
+  var subMIT = document.querySelector("#taskAssignment").value;
+
+  localStorage.setItem(UserAssign);
+};

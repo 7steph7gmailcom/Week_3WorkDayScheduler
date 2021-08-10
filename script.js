@@ -1,7 +1,7 @@
-var UserAssign = "#taskAssignment";
+var UserAssign = $("#taskAssignment");
 // console.log(UserAssign);
 
-var saveButton = "#save";
+var saveButton = $(".saveBtn");
 
 // Display day of the week for user
 var today = moment();
@@ -16,9 +16,7 @@ function saveTask() {
   document.querySelector(UserAssign).value;
 }
 
-saveButton.addEventListener("click", function (event) {
+saveButton.on("click", function (event) {
   event.preventDefault();
-
-  var saveButton = "#save";
-  // console.log(saveButton);
+  console.log("youve clicked the button");
 });

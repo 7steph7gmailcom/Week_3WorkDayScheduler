@@ -4,6 +4,8 @@
 
 #### This weeks project was to create a simple calendar application which employed the use of a third part API, Moments.js. Students were given starter codes for HTML and CSS. THerfore code was built from mostly Java Script with the ability to alter starter code if needed. This daily planner needed to have simple functions and displays which showed the user the date and allowed for them to input data into the time blocks. These time blocks were to store user input into local storage.
 
+## Screenshot
+![138E7C0B-545D-41E9-AE39-447471196C97_1_105_c](https://user-images.githubusercontent.com/87405546/129495116-4970be6d-f6f5-4f2e-908b-322603cf340b.jpeg)
 ## Technology Used
 
 - HTML

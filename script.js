@@ -17,6 +17,7 @@ function init() {
   // Save button links with user "click"
   $(".saveBtn").on("click", handleSave);
 }
+
 // For calendar to know what time it is and display color
 function colorsTimeBlock() {
   $(".time-block").each(function () {
@@ -30,7 +31,7 @@ function colorsTimeBlock() {
     } else if (textUserInput > currentHour) {
       $(this).addClass("future");
     } else {
-      $(this).addClass("present");
+      $(this).addClass("present", "red");
     }
   });
 }

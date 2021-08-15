@@ -3,13 +3,6 @@ var UserAssign = $("#taskAssignment");
 
 var saveButton = $(".saveBtn");
 
-var colorTimeBlocks = $(".time-blocks");
-console.log(colorTimeBlocks);
-
-// Display day of the week for user
-var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
-
 // function saveTask() {
 //   var userData = {
 //     UserAssign: comment.value.trim(),
@@ -19,17 +12,21 @@ $("#currentDay").text(today.format("MMM Do, YYYY"));
 //   document.querySelector(UserAssign).value;
 // }
 
-setInterval(colorTimeBlocks, 60000);
+function init() {
+  // Display day of the week for user
+  $("#currentDay").text(moment().format("MMM Do, YYYY"));
+  // Color codes blocks of time
+  setInterval(colorTimeBlock, 60000);
+  console.log(colorTimeBlock);
 
-$(".time-block").each(function () {
-  var sectionId = $(this).attr("id");
-  $("#" + sectionId + " textarea").text(
-    localStorage.getItem(moment().format("DDDYYYY") + sectionId)
-  );
-});
-$("saveBtn").on("click", handleSave);
+  $(".time-block").each(function () {
+    var sectionId = $(this).attr("id");
+    $("#" + sectionId + " textarea").text(
+      localStorage.getItem(moment().format("DDDYYYY") + sectionId)
+    );
+  });
+  $("saveBtn").on("click", handleSave);
 }
 
 // var saveUserInput = $(".col -md-10 description");
 // console.log(saveUserInput);
-

@@ -1,59 +1,45 @@
-// var UserAssign = $("#taskAssignment");
-// // console.log(UserAssign);
-
-// var saveButton = $(".saveBtn");
-
-// function saveTask() {
-//   var userData = {
-//     UserAssign: comment.value.trim(),
-//   };
-//   // setItem to get data to persist. JSON to translate data.
-//   localStorage.setItem(UserAssign, JSON.stringify("taskAssignment"));
-//   document.querySelector(UserAssign).value;
-// }
-
 $(init);
 
 function init() {
-  // Display day of the week for user
-  $("#currentDay").text(moment().format("MMM Do, YYYY"));
-  textAreaColor();
+  // Display day of the week + time for user
+  $("#currentDay").text(moment().format("LLL"));
   // Color codes blocks of time 60000=60secs=1min
-  setInterval(colorTimeBlock, 60000);
-  // console.log(colorTimeBlock);
+  colorsTimeBlock();
+  setInterval(colorsTimeBlock, 60000);
+
   $(".time-block").each(function () {
     var sectionId = $(this).attr("id");
+
     $("#" + sectionId + " textarea").text(
       localStorage.getItem(moment().format("DDDYYYY") + sectionId)
     );
   });
-  $(".saveBtn").sectionId("click", saveUserInput);
+  // Save button links with user "click"
+  $(".saveBtn").on("click", handleSave);
+}
+// For calendar to know what time it is and display color
+function colorsTimeBlock() {
+  $(".time-block").each(function () {
+    var textUserInput = parseInt($(this).attr("id").replace("hour-", ""));
+    var currentHour = parseInt(moment().format("H"));
+
+    $(this).removeClass("Past,Present,Future");
+
+    if (textUserInput < currentHour) {
+      $(this).addClass("past");
+    } else if (textUserInput > currentHour) {
+      $(this).addClass("future");
+    } else {
+      $(this).addClass("present");
+    }
+  });
 }
 
-// Set blocks to recognize time: past, present, future
-function textAreaColor() {
-  $(".time-block").each(PastPresentFuture);
-}
-
-// Set blocks to recognize time: past, present, future
-function PastPresentFuture() {
-  var textAreaHour = parseInt($(this).attr("id").replace("hour-", ""));
-  var currentTextAreaHour = parseInt(moment().format("H"));
-  $(this).removeClass("past present future");
-  if (textAreaHour < currentTextAreaHour) {
-    $(this).addClass("past");
-  } else if (textAreaHour > currentTextAreaHour) {
-    $(this).addClass("future");
-  } else {
-    $(this).addClass("present");
-  }
-}
-
-function saveUserInput(event) {
-  var textAreaId = $(this).parseInt().attr("id");
-
+function handleSave(event) {
+  var hourId = $(this).parent().attr("id");
+  // Saves items to local storage from user input in time blocks
   localStorage.setItem(
-    moment().format("DDDYYYY") + textAreaId,
+    moment().format("DDDYYYY") + hourId,
     $("#" + hourId + " textarea").val()
   );
 }
